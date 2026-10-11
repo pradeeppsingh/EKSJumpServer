@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: pady-app
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: pady-data
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: pady-monitoring
+
+
+
+## kubectl create namespace pady-app
+## kubectl create namespace pady-data
+## kubectl create namespace pady-monitoring

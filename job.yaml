@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pady-batch-job
+  namespace: pady-app
+spec:
+  template:
+    spec:
+      containers:
+      - name: pady-batch-container
+        image: busybox
+        command: ["sh", "-c", "echo Hello,Pady Kubernetes running ! && sleep 30"]
+      restartPolicy: Never
+  backoffLimit: 4

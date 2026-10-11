@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: pady-monitoring-daemonset
+  namespace: pady-monitoring
+spec:
+  selector:
+    matchLabels:
+      app: pady-monitor
+  template:
+    metadata:
+      labels:
+        app: pady-monitor
+    spec:
+      containers:
+      - name: node-exporter
+        image: prom/node-exporter:latest
+        
